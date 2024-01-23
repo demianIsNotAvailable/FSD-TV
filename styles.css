@@ -1,0 +1,227 @@
+body {
+  background-color: #aaaaaa;
+}
+
+span {
+  justify-self: center;
+  align-self: center;
+  color: rgb(189, 189, 189);
+  user-select: none;
+}
+
+#container {
+  display: flex;
+  height: 80vh;
+  width: 80vw;
+}
+
+#tvContainer {
+  width: 1024px;
+  margin: auto;
+}
+
+#tv {
+  height: 490px;
+  background: #000;
+  position: relative;
+  margin: 5%;
+  padding: 2% 2% 4% 2%;
+  border-radius: 10px;
+  border-bottom-left-radius: 50% 2%;
+  border-bottom-right-radius: 50% 2%;
+  transition: margin-right 1s;
+  background: rgb(34, 34, 34)
+    radial-gradient(circle at 50% 0, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
+  box-shadow: inset rgba(0, 0, 0, 0.6) 0 -1px 7px,
+    inset rgba(252, 255, 255, 0.3) 0px 1px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px 0px;
+  transition: all 1s ease-in 0.3s;
+}
+
+#tv:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 3%;
+  left: 36%;
+  height: 0.5%;
+  width: 30%;
+  background: #e0e0e0;
+  border-radius: 50%;
+}
+
+.tvScreen {
+  display: block;
+  position: relative;
+  background-size: cover;
+  background-position: top center;
+  border-radius: 5px;
+  padding-bottom: 56.25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.tvOff {
+  background: linear-gradient(
+    to bottom,
+    #222,
+    #1a1a1a 30%,
+    #222 50%,
+    #1a1a1a 70%,
+    #222
+  );
+}
+
+.tvLeg,
+.tvStep {
+  background-color: #000;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  background: rgb(34, 34, 34)
+    radial-gradient(circle at 50% 0, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
+  box-shadow: inset rgba(0, 0, 0, 0.6) 0 -1px 7px,
+    inset rgba(252, 255, 255, 0.3) 0px 1px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px 0px;
+  transition: all 1s ease-in 0.3s;
+  top: 7.3%;
+}
+.tvLeg {
+  width: 45px;
+  height: 100px;
+  left: 50%;
+  bottom: 15px;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+.tvStep {
+  height: 30px;
+  width: 360px;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  z-index: 11;
+}
+
+#remote {
+  display: grid;
+  grid-template-columns: 60px 30px 60px;
+  grid-template-rows: 50px 50px 0 repeat(4, 50px);
+  height: 360px;
+  width: 150px;
+  margin-top: 20%;
+  padding-top: 10px;
+  background: rgb(34, 34, 34)
+    radial-gradient(circle at 50% 0, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
+  box-shadow: inset rgba(0, 0, 0, 0.6) 0 -1px 7px,
+    inset rgba(252, 255, 255, 0.3) 0px 1px 8px, rgba(0, 0, 0, 0.8) 0 3px 8px 0px;
+  transition: all 1s ease-in 0.3s;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  align-self: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.round {
+  height: 1.8em;
+  width: 1.8em;
+  border-style: solid;
+  border-width: 0.2em;
+  border-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  color: white;
+  background-color: rgb(36, 36, 36);
+}
+
+.up {
+  width: 0;
+  height: 0;
+  border-left: 0.9em solid transparent;
+  border-right: 0.9em solid transparent;
+  border-bottom: 1.8em solid rgb(48, 48, 48);
+}
+
+.down {
+  width: 0;
+  height: 0;
+  border-left: 0.9em solid transparent;
+  border-right: 0.9em solid transparent;
+  border-top: 1.8em solid rgb(48, 48, 48);
+}
+
+#on {
+  display: grid;
+  place-items: center;
+  background-color: rgb(189, 0, 0);
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#on::before {
+  content: "";
+  width: 1em;
+  height: 1em;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  position: relative;
+  top: 5px;
+}
+
+#bar {
+  height: 15px;
+  width: 2px;
+  background: #eee;
+  position: relative;
+  bottom: 18px;
+  box-shadow: 0 0 0 3px rgb(189, 0, 0);
+}
+
+#source {
+  grid-column: 3;
+  grid-row: 1;
+}
+#volUp {
+  grid-column: 1;
+  grid-row: 2;
+}
+#volDown {
+  grid-column: 1;
+  grid-row: 4;
+}
+#chUp {
+  grid-column: 3;
+  grid-row: 2;
+}
+#chDown {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+#volText {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#chText {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.button.round:nth-child(n + 7):nth-child(n + 9) {
+  grid-row: 6;
+}
+
+.button.round:nth-child(n + 10):nth-child(n + 12) {
+  grid-row: 7;
+}
+.button.round:nth-child(n + 13):nth-child(n + 15) {
+  grid-row: 8;
+}
