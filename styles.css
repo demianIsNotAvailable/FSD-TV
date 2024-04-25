@@ -54,6 +54,7 @@ span {
   position: relative;
   background-size: cover;
   background-position: top center;
+  background-image: url("./Screenshot_16.png");
   border-radius: 5px;
   padding-bottom: 56.25%;
   position: relative;
@@ -224,4 +225,10 @@ span {
 }
 .button.round:nth-child(n + 13):nth-child(n + 15) {
   grid-row: 8;
+}
+
+h1 {
+  margin-left: 1em;
+  position: absolute;
+  color: white
 }
